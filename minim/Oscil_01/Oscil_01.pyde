@@ -1,3 +1,5 @@
+#Create a Tone / Note. As simple and clean as possible. Start here.
+
 add_library('Minim')  #import Library
 
 minim = Minim(this)  #Minim Object
