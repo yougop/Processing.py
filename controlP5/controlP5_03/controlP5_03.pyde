@@ -30,7 +30,6 @@ def setup():
     cp5.getController("lorem ipsum").getCaptionLabel().align(ControlP5.RIGHT, ControlP5.BOTTOM_OUTSIDE).setPaddingX(0)
 
 def draw():
-    global val_slider; color_slider
     background(60)
     fill(255-color_slider, 0, color_slider)
     ellipse(width/3*2, height/3*2-30, val_slider, val_slider)
