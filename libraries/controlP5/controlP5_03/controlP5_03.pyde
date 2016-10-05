@@ -1,3 +1,5 @@
+add_library('controlP5')
+
 from controlP5 import ControlP5
 from controlP5 import Slider
 
