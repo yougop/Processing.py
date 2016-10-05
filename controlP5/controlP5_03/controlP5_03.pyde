@@ -1,22 +1,18 @@
 # add Sliders with controlP5 to your processing.py sketches
 
-add_library('controlP5')
-
 from controlP5 import ControlP5
 from controlP5 import Slider
 
-global val_slider; val_slider = 50
-global color_slider; color_slider = 255
+val_slider = 50; color_slider = 255
 
-def my_listener( my_input ):
-    global val_slider; global color_slider
-    #print input    
+def my_listener( my_input ): 
+    global val_slider, color_slider
     if my_input.getName() == 'my slider':
         val_slider = int( my_input.getValue() )
         print ("Size: " + str( val_slider ) )
     if my_input.getName() == 'my color':
         color_slider = int( my_input.getValue() )
-        print ("Color: " + str( color_slider ) )    
+        print ("Color: " + str( color_slider ) )   
 
 def setup():
     size(700, 400)
@@ -34,7 +30,7 @@ def setup():
     cp5.getController("lorem ipsum").getCaptionLabel().align(ControlP5.RIGHT, ControlP5.BOTTOM_OUTSIDE).setPaddingX(0)
 
 def draw():
-    global val_slider; global color_slider
+    global val_slider; color_slider
     background(60)
     fill(255-color_slider, 0, color_slider)
     ellipse(width/3*2, height/3*2-30, val_slider, val_slider)
